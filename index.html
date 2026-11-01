@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Fery Andriawan - Software Engineer & Web Developer</title>
+  <meta content="Portofolio Fery Andriawan - Software Engineer & Web Developer Laravel" name="description">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- Premium Custom Styling Overrides -->
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --accent: #06b6d4;
+      --dark-bg: #0f172a;
+      --card-bg: #ffffff;
+      --border-color: #e2e8f0;
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+      --radius: 16px;
+      --shadow-sm: 0 4px 12px rgba(15, 23, 42, 0.03);
+      --shadow-md: 0 12px 24px -6px rgba(15, 23, 42, 0.06);
+      --shadow-lg: 0 20px 32px -8px rgba(37, 99, 235, 0.12);
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: var(--text-main);
+      background-color: #f8fafc;
+      overflow-x: hidden;
+    }
+
+    /* Modern Typography & Section Title */
+    .section-title {
+      padding-bottom: 20px;
+    }
+    .section-title h2 {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--dark-bg);
+      position: relative;
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+    .section-title h2::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 40px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      bottom: -6px;
+      left: 0;
+      border-radius: 4px;
+    }
+
+    /* Status Badge Pulsing */
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      background: rgba(37, 99, 235, 0.08);
+      border: 1px solid rgba(37, 99, 235, 0.2);
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      background-color: #10b981;
+      border-radius: 50%;
+      box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+      animation: pulse 1.8s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+      70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+      100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+    }
+
+    /* Expertise Box Premium Glass */
+    .expertise-card {
+      background: var(--card-bg);
+      padding: 30px 24px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .expertise-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+      border-color: rgba(37, 99, 235, 0.3);
+    }
+    .icon-wrapper {
+      width: 56px;
+      height: 56px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    /* Tech Stack Badges */
+    .tech-pill {
+      display: inline-block;
+      padding: 6px 14px;
+      background: #f1f5f9;
+      color: #334155;
+      font-weight: 600;
+      font-size: 0.85rem;
+      border-radius: 8px;
+      margin-right: 6px;
+      margin-bottom: 8px;
+      border: 1px solid #e2e8f0;
+      transition: all 0.2s ease;
+    }
+    .tech-pill:hover {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+    }
+
+    /* Modern Portfolio Card */
+    .portfolio-card-v2 {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      border: 1px solid var(--border-color);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .portfolio-card-v2:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+    }
+    .portfolio-img-box {
+      height: 240px;
+      position: relative;
+      overflow: hidden;
+    }
+    .portfolio-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      transition: transform 0.5s ease;
+    }
+    .portfolio-card-v2:hover .portfolio-img-box img {
+      transform: scale(1.05);
+    }
+
+    /* Certificate Card Modern */
+    .certificate-card-v2 {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 18px;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .certificate-card-v2:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+      border-color: rgba(37, 99, 235, 0.3);
+    }
+    .cert-img-container {
+      height: 180px;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #f8fafc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px dashed #cbd5e1;
+    }
+    .cert-img-container img {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+    }
+
+    /* Custom Timeline Resume */
+    .timeline-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 24px;
+      border: 1px solid var(--border-color);
+      margin-bottom: 20px;
+      box-shadow: var(--shadow-sm);
+      height: 100%;
+    }
+
+    /* Premium Button Styles */
+    .btn-gradient {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: #ffffff;
+      padding: 10px 22px;
+      border-radius: 10px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+    }
+    .btn-gradient:hover {
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(37, 99, 235, 0.35);
+    }
+    .btn-outline-custom {
+      border: 1.5px solid var(--border-color);
+      color: var(--text-main);
+      padding: 8px 18px;
+      border-radius: 10px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #ffffff;
+      transition: all 0.2s ease;
+    }
+    .btn-outline-custom:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      background: rgba(37, 99, 235, 0.04);
+    }
+
+    /* Banner Contact Callout */
+    .contact-banner {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      border-radius: var(--radius);
+      padding: 40px 30px;
+      color: #ffffff;
+      position: relative;
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
+
+      <div class="profile">
+        <img src="assets/img/profile-img.png" alt="Fery Andriawan" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="index.html">Fery Andriawan</a></h1>
+        <div class="social-links mt-3 text-center">
+          <a href="https://drive.google.com/drive/folders/1_2o_PzJsLdZvBJK8JhrO0Vx6xPog8ILt" class="google-drive" target="_blank" title="PROJECT - FERY ANDRIAWAN (Google Drive)">
+            <i class="bx bxl-google"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/fery-andriawan-53a81a152/" class="linkedin" target="_blank"><i class="bx bxl-linkedin"></i></a>
+        </div>
+      </div>
+
+      <!-- .nav-menu -->
+      <nav id="navbar" class="nav-menu navbar">
+        <ul>
+          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
+          <li><a href="#skills" class="nav-link scrollto"><i class="bx bx-code-alt"></i> <span>Tech Stack</span></a></li>
+          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
+          <li><a href="#certificates" class="nav-link scrollto"><i class="bx bx-award"></i> <span>Certificates</span></a></li>
+          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="hero-container" data-aos="fade-in">
+      <h1>Fery Andriawan</h1>
+      <p>I'm <span class="typed" data-typed-items="Web Developer, Frontend Developer, Backend Developer, Software Engineer"></span></p>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>About Me</h2>
+          <p>Lulusan Teknik Informatika yang berfokus pada pengembangan aplikasi web modern yang aman, terstruktur, dan efisien.</p>
+        </div>
+
+        <div class="row align-items-center g-4">
+          <div class="col-lg-4 text-center" data-aos="fade-right">
+            <img src="assets/img/profile-img.png" class="img-fluid rounded-4 shadow-sm border" alt="Fery Andriawan" style="max-width: 250px;">
+          </div>
+          
+          <div class="col-lg-8" data-aos="fade-left">
+            <div class="status-badge">
+              <span class="pulse-dot"></span> Available for Opportunities
+            </div>
+            
+            <h3 class="fw-bold mb-3" style="color: var(--dark-bg);">Software Engineer &amp; Web Developer</h3>
+            
+            <p class="text-muted leading-relaxed mb-4">
+              Lulusan S1 Teknik Informatika dengan spesialisasi pengembangan aplikasi web berbasis <strong>PHP &amp; Laravel Framework</strong>. Berpengalaman merancang arsitektur database MySQL yang optimal, mengimplementasikan konsep <em>Object-Oriented Programming (OOP)</em>, serta terbiasa bekerja dalam siklus <em>Software Development Life Cycle (SDLC)</em> secara terstruktur.
+            </p>
+
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <div class="d-flex align-items-center gap-3 p-3 bg-white rounded-3 border h-100">
+                  <i class="bi bi-mortarboard fs-3 text-primary"></i>
+                  <div>
+                    <div class="text-muted small">Pendidikan</div>
+                    <div class="fw-bold text-dark">S1 Teknik Informatika</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <div class="d-flex align-items-center gap-3 p-3 bg-white rounded-3 border h-100">
+                  <i class="bi bi-geo-alt fs-3 text-primary"></i>
+                  <div>
+                    <div class="text-muted small">Domisili</div>
+                    <div class="fw-bold text-dark">Bogor, Jawa Barat</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <div class="d-flex align-items-center gap-3 p-3 bg-white rounded-3 border h-100">
+                  <i class="bi bi-award fs-3 text-primary"></i>
+                  <div>
+                    <div class="text-muted small">IPK Akademik</div>
+                    <div class="fw-bold text-dark">3.61 / 4.00</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <div class="d-flex align-items-center gap-3 p-3 bg-white rounded-3 border h-100">
+                  <i class="bi bi-envelope fs-3 text-primary"></i>
+                  <div>
+                    <div class="text-muted small">Email Usaha</div>
+                    <div class="fw-bold text-dark small">fery.andriawan14@gmail.com</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Core Expertise Section ======= -->
+    <!-- ======= Core Expertise Section ======= -->
+    <section id="expertise" class="facts">
+      <div class="container">
+        <div class="section-title">
+          <h2>Core Expertise</h2>
+          <p>Kombinasi keahlian teknis dan pemahaman mendalam pada arsitektur pengembangan perangkat lunak modern.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-3 col-md-6 d-flex" data-aos="fade-up">
+            <div class="expertise-card w-100">
+              <div class="icon-wrapper" style="background: rgba(240, 83, 64, 0.1); color: #f05340;">
+                <i class="bx bxl-laravel"></i>
+              </div>
+              <h5 class="fw-bold">PHP (Laravel) &amp; C# (.NET)</h5>
+              <p class="text-muted small mb-0">Pengembangan backend handal menggunakan Laravel, .NET, serta penerapan arsitektur RESTful API yang aman dan terstruktur.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div class="expertise-card w-100">
+              <div class="icon-wrapper" style="background: rgba(37, 99, 235, 0.1); color: #2563eb;">
+                <i class="bx bx-data"></i>
+              </div>
+              <h5 class="fw-bold">Multi-Database Management</h5>
+              <p class="text-muted small mb-0">Menguasai pengelolaan basis data MySQL, PostgreSQL, dan SQL Server untuk performa optimal.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div class="expertise-card w-100">
+              <div class="icon-wrapper" style="background: rgba(16, 185, 129, 0.1); color: #10b981;">
+                <i class="bx bx-check-shield"></i>
+              </div>
+              <h5 class="fw-bold">Company Visit System</h5>
+              <p class="text-muted small mb-0">Berhasil mengembangkan Company Visit System yang meningkatkan efisiensi administrasi hingga 30%.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
+            <div class="expertise-card w-100">
+              <div class="icon-wrapper" style="background: rgba(245, 158, 11, 0.1); color: #f59e0b;">
+                <i class="bx bx-layout"></i>
+              </div>
+              <h5 class="fw-bold">Frontend &amp; Modern Web</h5>
+              <p class="text-muted small mb-0">Membangun antarmuka interaktif menggunakan JavaScript, React.js, Next.js, jQuery, dan RESTful API.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Skills Section (Modern Tech Stack Tags) ======= -->
+    <section id="skills" class="section-bg">
+      <div class="container my-5">
+        <div class="section-title">
+          <h2>Tech Stack &amp; Skills</h2>
+          <p>Teknologi, framework, dan perangkat yang biasa saya gunakan dalam membangun solusi digital:</p>
+        </div>
+
+        <div class="bg-white p-4 rounded-4 border shadow-sm" data-aos="fade-up">
+          <h6 class="fw-bold text-muted mb-3"><i class="bi bi-code-slash text-primary me-2"></i> BAHASA &amp; FRAMEWORK</h6>
+          <div class="mb-4">
+            <span class="tech-pill">PHP</span>
+            <span class="tech-pill">C# (.NET)</span>
+            <span class="tech-pill">JavaScript</span>
+            <span class="tech-pill">Laravel</span>
+            <span class="tech-pill">React.js</span>
+            <span class="tech-pill">Next.js</span>
+            <span class="tech-pill">.NET</span>
+            <span class="tech-pill">jQuery</span>
+            <span class="tech-pill">HTML5 &amp; CSS3</span>
+          </div>
+
+          <h6 class="fw-bold text-muted mb-3"><i class="bi bi-database text-primary me-2"></i> DATABASE &amp; TOOLS</h6>
+          <div class="mb-4">
+            <span class="tech-pill">MySQL</span>
+            <span class="tech-pill">PostgreSQL</span>
+            <span class="tech-pill">SQL Server</span>
+            <span class="tech-pill">Git &amp; GitHub</span>
+            <span class="tech-pill">Postman API</span>
+            <span class="tech-pill">Visual Studio Code</span>
+            <span class="tech-pill">Jira</span>
+            <span class="tech-pill">Power BI</span>
+            <span class="tech-pill">Figma</span>
+            <span class="tech-pill">Microsoft Visio</span>
+          </div>
+
+          <h6 class="fw-bold text-muted mb-3"><i class="bi bi-cpu text-primary me-2"></i> KONSEP &amp; METODOLOGI</h6>
+          <div>
+            <span class="tech-pill">RESTful API Design</span>
+            <span class="tech-pill">Desain Web Responsif</span>
+            <span class="tech-pill">Object-Oriented Programming (OOP)</span>
+            <span class="tech-pill">Software Development Life Cycle (SDLC)</span>
+            <span class="tech-pill">Database Normalization</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Resume Section ======= -->
+    <section id="resume" class="resume">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Resume &amp; Experience</h2>
+          <p>Jejak langkah pendidikan dan pengalaman profesional saya:</p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Education Column -->
+          <div class="col-lg-6 d-flex" data-aos="fade-up">
+            <div class="timeline-card w-100">
+              <h4 class="fw-bold mb-3" style="color: var(--dark-bg);"><i class="bi bi-book text-primary me-2"></i> Pendidikan</h4>
+              <div class="d-flex align-items-center justify-content-between mb-2">
+                <span class="badge bg-primary-subtle text-primary fw-bold">2022 - 2026</span>
+                <span class="text-muted small fw-semibold">IPK: 3.61 / 4.00</span>
+              </div>
+              <h5 class="fw-bold mb-1">S1 Teknik Informatika</h5>
+              <p class="text-primary small fw-semibold mb-2">Universitas Dian Nusantara</p>
+              <p class="text-muted small mb-0">Spesialisasi Relevan: <em>Software Engineering &amp; Web Development</em>.</p>
+            </div>
+          </div>
+
+          <!-- Work & Internship Column -->
+          <div class="col-lg-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div class="timeline-card w-100">
+              <h4 class="fw-bold mb-3" style="color: var(--dark-bg);"><i class="bi bi-briefcase text-primary me-2"></i> Pengalaman Magang</h4>
+              <div class="d-flex align-items-center justify-content-between mb-2">
+                <span class="badge bg-success-subtle text-success fw-bold">Magang</span>
+                <span class="text-muted small">Okt 2024 - Des 2024</span>
+              </div>
+              <h5 class="fw-bold mb-1">Software Development Intern</h5>
+              <p class="text-muted small mb-2">Kementerian Agraria dan Tata Ruang / BPN</p>
+              <ul class="text-muted small ps-3 mb-3">
+                <li>Mengembangkan website shortlink menggunakan framework <strong>Laravel 11</strong>.</li>
+                <li>Merancang skema database MySQL dan antarmuka web yang responsif.</li>
+              </ul>
+              <div class="pt-2 border-top">
+                <a href="https://github.com/FeryAndriawan14/pengembangan-website-shortlink-menggunakan-laravel" target="_blank" class="btn-outline-custom py-1 px-3 fs-7">
+                  <i class="bx bxl-github"></i> Repository GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Portfolio Showcase</h2>
+          <p>Beberapa contoh proyek aplikasi web yang pernah saya buat:</p>
+        </div>
+
+        <div class="row g-4" data-aos="fade-up">
+          <!-- Portfolio 1 -->
+          <div class="col-lg-6 d-flex">
+            <div class="portfolio-card-v2 w-100">
+              <div class="portfolio-img-box">
+                <img src="assets/img/portfolio/portfolio-1.png" alt="Shortlink Website Project">
+              </div>
+              <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
+                <div>
+                  <span class="badge bg-primary-subtle text-primary mb-2">Web Application</span>
+                  <h5 class="fw-bold mb-2">Pengembangan Website Shortlink (Laravel)</h5>
+                  <p class="text-muted small mb-3">Aplikasi pemendek tautan berbasis web yang dibangun dengan Laravel 11 untuk mendukung efisiensi operasional link internal instansi.</p>
+                </div>
+                <div>
+                  <a href="portfolio-details.html" class="btn-gradient fs-7">
+                    <i class="bx bx-right-arrow-alt"></i> Lihat Detail Proyek
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Portfolio 2 -->
+          <div class="col-lg-6 d-flex">
+            <div class="portfolio-card-v2 w-100">
+              <div class="portfolio-img-box">
+                <img src="assets/img/portfolio/portfolio-2.png" alt="Company Visit System Project">
+              </div>
+              <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
+                <div>
+                  <span class="badge bg-primary-subtle text-primary mb-2">Information System</span>
+                  <h5 class="fw-bold mb-2">Company Visit System</h5>
+                  <p class="text-muted small mb-3">Sistem pengelolaan data kunjungan perusahaan untuk menyederhanakan proses pencatatan dan verifikasi tamu secara terintegrasi.</p>
+                </div>
+                <div>
+                  <a href="portfolio-details2.html" class="btn-gradient fs-7">
+                    <i class="bx bx-right-arrow-alt"></i> Lihat Detail Proyek
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======= Certificates Section ======= -->
+    <section id="certificates" class="certificates">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Expertise Certificates</h2>
+          <p>Sertifikasi resmi untuk memvalidasi kompetensi dan keahlian teknis saya:</p>
+        </div>
+
+        <div class="row g-4" data-aos="fade-up">
+          <!-- Cert 1 -->
+          <div class="col-lg-4 col-md-6 d-flex">
+            <div class="certificate-card-v2 w-100">
+              <div>
+                <div class="cert-img-container mb-3">
+                  <img src="assets/img/sertifikat/FERY ANDRIAWAN-sertifikatpkl.jpg" alt="Sertifikat Internship">
+                </div>
+                <h6 class="fw-bold mb-1">Sertifikat Magang / PKL</h6>
+              </div>
+              <p class="text-muted small mb-0"><strong>Penerbit:</strong> Kementerian ATR/BPN</p>
+            </div>
+          </div>
+
+          <!-- Cert 2 -->
+          <div class="col-lg-4 col-md-6 d-flex">
+            <div class="certificate-card-v2 w-100">
+              <div>
+                <div class="cert-img-container mb-3">
+                  <img src="assets/img/sertifikat/databasedesign-fery andriawan.png" alt="Database Design">
+                </div>
+                <h6 class="fw-bold mb-1">Database Design Certificate</h6>
+              </div>
+              <p class="text-muted small mb-0"><strong>Penerbit:</strong> Oracle Academy</p>
+            </div>
+          </div>
+
+          <!-- Cert 3 -->
+          <div class="col-lg-4 col-md-6 d-flex">
+            <div class="certificate-card-v2 w-100">
+              <div>
+                <div class="cert-img-container mb-3">
+                  <img src="assets/img/sertifikat/PYTHON-INSTITUTE.png" alt="Cisco Networking">
+                </div>
+                <h6 class="fw-bold mb-1">Cisco Networking Academy</h6>
+              </div>
+              <p class="text-muted small mb-0"><strong>Penerbit:</strong> Python Institute</p>
+            </div>
+          </div>
+
+          <!-- Cert 4 -->
+          <div class="col-lg-4 col-md-6 d-flex">
+            <div class="certificate-card-v2 w-100">
+              <div>
+                <div class="cert-img-container mb-3">
+                  <img src="assets/img/sertifikat/databaseprogrammingwithsql.png" alt="Database Programming SQL">
+                </div>
+                <h6 class="fw-bold mb-1">Database Programming with SQL</h6>
+              </div>
+              <p class="text-muted small mb-0"><strong>Penerbit:</strong> Oracle Academy</p>
+            </div>
+          </div>
+
+          <!-- Cert 5 -->
+          <div class="col-lg-4 col-md-6 d-flex">
+            <div class="certificate-card-v2 w-100">
+              <div>
+                <div class="cert-img-container mb-3">
+                  <img src="assets/img/sertifikat/Java Foundations.png" alt="Java Foundations">
+                </div>
+                <h6 class="fw-bold mb-1">Java Foundations Certificate</h6>
+              </div>
+              <p class="text-muted small mb-0"><strong>Penerbit:</strong> Oracle Academy</p>
+            </div>
+          </div>
+
+          <!-- Cert 6 -->
+          <div class="col-lg-4 col-md-6 d-flex">
+            <div class="certificate-card-v2 w-100">
+              <div>
+                <div class="cert-img-container mb-3">
+                  <img src="assets/img/sertifikat/TOEFL.jpg" alt="TOEFL ITP Test">
+                </div>
+                <h6 class="fw-bold mb-1">TOEFL ITP Prediction Test</h6>
+              </div>
+              <p class="text-muted small mb-0"><strong>Penerbit:</strong> PT Satukelas Adhyapana</p>
+            </div>
+          </div>
+
+          <!-- Cert 7 -->
+          <div class="col-lg-4 col-md-6 d-flex">
+            <div class="certificate-card-v2 w-100">
+              <div>
+                <div class="cert-img-container mb-3">
+                  <img src="assets/img/sertifikat/dicoding.png" alt="dicoding">
+                </div>
+                <h6 class="fw-bold mb-1">Belajar dasar pemrograman web</h6>
+              </div>
+              <p class="text-muted small mb-0"><strong>Penerbit:</strong> Dicoding Indonesia</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact section-bg">
+      <div class="container">
+        <div class="section-title">
+          <h2>Contact Me</h2>
+          <p>Tertarik bekerjasama atau ingin mendiskusikan peluang proyek? Hubungi saya kapan saja!</p>
+        </div>
+
+        <div class="contact-banner" data-aos="fade-up">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-7">
+              <h3 class="fw-bold text-white mb-2">Mari Bangun Solusi Digital Bersama!</h3>
+              <p class="text-light opacity-75 mb-0">Saya selalu terbuka untuk diskusi pekerjaan penuh waktu, kolaborasi proyek web, atau konsultasi teknis.</p>
+            </div>
+            
+            <div class="col-lg-5 text-lg-end">
+              <a href="mailto:fery.andriawan14@gmail.com" class="btn btn-light fw-bold px-4 py-2 rounded-3 me-2">
+                <i class="bi bi-envelope-fill text-primary me-1"></i> Kirim Email
+              </a>
+              <a href="https://wa.me/628986343641" target="_blank" class="btn btn-outline-light fw-bold px-4 py-2 rounded-3">
+                <i class="bi bi-whatsapp me-1"></i> WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>2026</span></strong>. Portfolio Fery Andriawan
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
