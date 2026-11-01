@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Shortlink Pro | Fery Andriawan</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-dark: #0f172a;
+      --accent: #38ef7d;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+
+    body { background-color: var(--bg-dark); color: var(--text-main); font-family: 'Plus Jakarta Sans', sans-serif; }
+
+    /* Premium Breadcrumbs */
+    .breadcrumbs { padding: 50px 0; background: transparent; }
+    .breadcrumbs h2 { font-weight: 800; color: white; letter-spacing: -1px; }
+
+    /* Modern Slider */
+    .portfolio-details-slider {
+      border-radius: 24px;
+      padding: 12px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    }
+    .portfolio-details-slider img { border-radius: 16px; transition: 0.4s; }
+
+    /* Info Card */
+    .portfolio-info {
+      background: rgba(30, 41, 59, 0.7);
+      backdrop-filter: blur(20px);
+      padding: 40px;
+      border-radius: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .portfolio-info h3 { font-weight: 800; color: var(--accent); margin-bottom: 25px; }
+    .portfolio-info ul { list-style: none; padding: 0; }
+    .portfolio-info ul li { margin-bottom: 15px; border-bottom: 1px solid #334155; padding-bottom: 10px; }
+
+    /* Description */
+    .portfolio-description h2 { font-weight: 800; margin-top: 40px; color: white; }
+    .portfolio-description p { color: var(--text-muted); line-height: 1.8; font-size: 1.1rem; }
+
+    /* Button */
+    .btn-premium {
+      background: linear-gradient(135deg, #11998e, var(--accent));
+      color: white; border: none; padding: 10px 25px; border-radius: 50px; font-weight: 600;
+    }
+    .btn-premium:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(56, 239, 125, 0.3); color: white; }
+  </style>
+</head>
+
+<body>
+
+  <main id="main">
+   <section class="breadcrumbs">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Project Details</h2>
+          <a href="index.html" class="btn btn-premium"><i class="bx bx-arrow-back"></i> Back to Portfolio</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="portfolio-details">
+      <div class="container">
+        <div class="row gy-5">
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="assets/img/portfolio/portfolio-details-1.png" class="img-fluid" alt=""></div>
+                <div class="swiper-slide"><img src="assets/img/portfolio/portfolio-details-2.png" class="img-fluid" alt=""></div>
+                <div class="swiper-slide"><img src="assets/img/portfolio/portfolio-details-3.png" class="img-fluid" alt=""></div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3>Project Specifications</h3>
+              <ul>
+                <li><strong>Category:</strong> Web Development</li>
+                <li><strong>Client:</strong> Kementerian ATR/BPN</li>
+                <li><strong>Date:</strong> 27 Desember, 2024</li>
+                <li><strong>Link:</strong> <a href="https://github.com/FeryAndriawan14/pengembangan-website-shortlink-menggunakan-laravel" style="color:var(--accent)">View Repository</a></li>
+              </ul>
+            </div>
+            <div class="portfolio-description">
+              <h2>Description</h2>
+              <p>
+                Platform pengembangan shortlink berbasis Laravel yang dioptimalkan untuk performa tinggi dan keamanan data. 
+                Sistem ini memungkinkan manajemen tautan yang efisien dengan fitur analitik untuk memantau trafik setiap kunjungan secara akurat.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script>
+    new Swiper('.portfolio-details-slider', {
+      speed: 600, loop: true, autoplay: { delay: 4000 },
+      pagination: { el: '.swiper-pagination', clickable: true }
+    });
+  </script>
+</body>
+</html>
